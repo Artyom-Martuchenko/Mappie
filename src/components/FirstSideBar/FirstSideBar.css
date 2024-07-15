@@ -1,0 +1,51 @@
+.first_sidebar_div {
+  width: 6.875rem;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 1);
+  border-right-style: solid;
+  border-width: medium;
+  border-color: rgba(196, 196, 196, 1);
+  text-align: center;
+  justify-content: space-between;
+  position: relative;
+  max-width: 110px;
+}
+
+.group_first_sidebar_div {
+  margin-top: 2.188rem;
+}
+
+.logo {
+  margin: 0px 2.438rem 2.5rem;
+  display: flex;
+  width: 1.875rem;
+  height: 2rem;
+}
+
+button {
+  margin: 0.938rem 1.563rem 0;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.search_button{
+    display: flex;
+}
+
+.saved_button{
+    display: flex;
+}
+
+#user_icon {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}

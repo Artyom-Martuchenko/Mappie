@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'MontRegular';
+  src: url('../../assets/Mont/Mont-Regular.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+.list_border {
+  margin: 0px 1.25rem 0px;
+  border-radius: 0.5rem;
+  border-style: solid;
+  border-width: 3px;
+  border-color: rgba(196, 196, 196, 1);
+  width: 21.875rem;
+  height: 30.625rem;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  margin-bottom: 1.25rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  width: 16.875rem;
+}
+
+.button_list {
+  all: unset;
+  margin-bottom: 1.25rem;
+  display: flex;
+}
+
+.scrolling {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 1.25rem 1.25rem 3px;
+  height: 29.375rem;
+}
+
+.types_img {
+  vertical-align: baseline;
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.types_text{
+  margin: auto;
+  margin-left: 1.25rem;
+  font-family: 'MontRegular';
+}

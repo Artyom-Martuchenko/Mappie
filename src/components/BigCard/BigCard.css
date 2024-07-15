@@ -1,0 +1,84 @@
+.big_cards_main {
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: rgba(196, 196, 196, 1);
+  margin: 0px 1.25rem 0px;
+  border-radius: 0.5rem;
+  width: 27.5rem;
+  height: 44.625rem;
+  position: relative;
+}
+
+.big_cards_photo {
+  width: 25rem;
+  height: 18.75rem;
+  border-radius: 10px;
+  background-color: gray;
+  margin: 1.25rem 1.25rem 0;
+}
+
+#big_cards_group {
+  margin: 1.25rem 1.875rem 2.188rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.big_cards_div {
+  display: flex;
+}
+
+.big_cards_attributes {
+  width: 30px;
+  height: 30px;
+  background-color: gray;
+}
+
+#big_cards_group_buttons {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.188rem;
+}
+
+.button_save_active {
+  background-color: white;
+  border-style: solid;
+  border-width: thick;
+  border-radius: 5px;
+  border-color: rgba(196, 196, 196, 1);
+  width: 9.625rem;
+/*   all: unset; */
+  height: 2.5rem;
+}
+
+.button_save_disactive {
+  background-color: rgba(199, 94, 94, 1);
+  color: white;
+  border-radius: 5px;
+  border-color: rgba(199, 94, 94, 1);
+  width: 9.625rem;
+  height: 2.5rem;
+}
+
+.button_search_disactive {
+  background-color: rgba(94, 123, 199, 1);
+  color: white;
+  border-radius: 5px;
+  border-color: rgba(94, 123, 199, 1);
+  width: 9.625rem;
+  height: 2.5rem;
+}
+
+.text{
+  max-height: 3em;
+  /* Обрезаем текст, если он не помещается в блоке */
+  overflow: hidden;
+  /* Добавляем многоточие в конце обрезанного текста */
+  text-overflow: ellipsis;
+  /* Запрещаем перенос слов */
+  white-space: wrap;
+}

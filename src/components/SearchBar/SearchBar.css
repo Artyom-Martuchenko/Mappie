@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'MontBold';
+  src: url('../../assets/Mont/Mont-Bold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
+.second_sidebar_div {
+  text-align: justify;
+  width: 25rem;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.text_favourite {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-top: 1.75rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  color: #1f2937;
+  font-family: MontBold;
+}
+
+.RadiusDiv {
+  display: flex;
+}
+
+.RadiusInput {
+  all: unset;
+  height: 50px;
+  width: 80px;
+  border-radius: 10px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: rgba(196, 196, 196, 1);
+  padding-left: 20px;
+  margin-right: 20px;
+  margin-left: 1.5rem;
+}
+
+.RadiusText {
+  font-family: "MontRegular";
+}
+
+.search_btn {
+  display: inline-block;
+  vertical-align: bottom;
+  all: unset;
+}
+
+.search_img {
+  margin-left: 1.5rem;
+}

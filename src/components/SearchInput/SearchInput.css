@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'MontLight';
+  src: url('../../assets/Mont/Mont-Light.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+.search_sidebar_div {
+  margin-top: 2.188rem;
+  margin-left: 1.5rem;
+  display: flex;
+  height: 3.75rem;
+  width: 21.875rem;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: rgba(196, 196, 196, 1);
+  justify-content: start;
+  align-items: center;
+}
+
+.search_sidebar_icon {
+  margin-left: 1.875rem;
+  height: 22px;
+  width: 22px;
+}
+
+.search_sidebar_input {
+  font-size: 16px;
+  all: unset;
+  margin-left: 1.25rem;
+  font-family: MontLight;
+}

@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "MontBold";
+  src: url("../../assets/Mont/Mont-Bold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+.second_sidebar_div {
+  text-align: justify;
+  width: 25rem;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.text_favourite {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-top: 1.75rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  color: #1f2937;
+  font-family: MontBold;
+}
+
+.card_div {
+  margin-top: 0.875rem;
+  margin-top: 1rem;
+}

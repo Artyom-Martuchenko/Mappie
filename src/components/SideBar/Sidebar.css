@@ -1,0 +1,11 @@
+.details_div {
+  width: 30.625rem;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+#sidebar{
+  display: flex;
+  flex-direction: row;
+  max-width: 37.5rem;
+}
