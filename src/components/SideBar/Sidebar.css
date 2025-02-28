@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'MontBold';
+  src: url('@/Mont/Mont-Bold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
 .details_div {
   width: 30.625rem;
   height: 100vh;
@@ -8,4 +15,25 @@
   display: flex;
   flex-direction: row;
   max-width: 37.5rem;
+}
+
+.back_operations{
+  /* padding-left: 1.5rem; */
+  padding-right: 1.5rem;
+  margin-top: 1.75rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  color: #1f2937;
+  font-family: MontBold;
+}
+
+.back_arrow{
+  margin-top: 30px;
+  margin-bottom: 24px;
+}
+
+.back_group{
+  display: flex;
+  justify-content: space-between;
 }

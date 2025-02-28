@@ -1,14 +1,14 @@
 import culture from'@/culture.png';
 import nature from'@/nature.png';
 import history from '@/history.png';
-import industry from'@/Property 1=fa-solid_industry.png';
-import car from'@/Property 1=fa_car.png';
-import market from'@/Property 1=fontisto_shopping-basket.png';
+import industry from'@/industry.png';
+import car from'@/car.png';
+import park from '@/park.png';
+import shop from '@/shop.png';
 import bank from'@/bank.png';
-import park from'@/Property 1=majesticons_ferris-wheel.png';
-import bicycle_road from'@/Property 1=ph_bicycle.png';
+import bicycle_road from'@/bicycle.png';
 import cenzured from'@/18+.png';
-import sport from'@/Property 1=fluent_sport-soccer-16-filled.png';
+import sport from'@/sport.png';
 import church from'@/church.png';
 import food from'@/food.png';
 import hotels from'@/hotels.png';
@@ -118,7 +118,7 @@ export const dummy_items = [
   {
     id: 5,
     name: "Магазины",
-    img: market,
+    img: shop,
     kinds: "shop",
     active: false,
   },
@@ -198,27 +198,27 @@ export const customHistory = new Icon({
 });
 
 export const customIndustry = new Icon({
-  iconUrl: require("../assets/Property 1=fa-solid_industry.png"),
+  iconUrl: require("../assets/industry.png"),
   iconSize: [Marker_icon_width, Marker_icon_height],
 });
 
 export const customCar = new Icon({
-  iconUrl: require("../assets/Property 1=fa_car.png"),
+  iconUrl: require("../assets/car.png"),
   iconSize: [Marker_icon_width, Marker_icon_height],
 });
 
 export const customShop = new Icon({
-  iconUrl: require("../assets/Property 1=solar_shop-2-bold.png"),
+  iconUrl: require("../assets/shop.png"),
   iconSize: [Marker_icon_width, Marker_icon_height],
 });
 
 export const customBicycleRoad = new Icon({
-  iconUrl: require("../assets/Property 1=solar_shop-2-bold.png"),
+  iconUrl: require("../assets/bicycle.png"),
   iconSize: [Marker_icon_width, Marker_icon_height],
 });
 
 export const customPark = new Icon({
-  iconUrl: require("../assets/Property 1=majesticons_ferris-wheel.png"),
+  iconUrl: require("../assets/park.png"),
   iconSize: [Marker_icon_width, Marker_icon_height],
 });
 
@@ -228,7 +228,7 @@ export const customCenzured = new Icon({
 });
 
 export const customSport = new Icon({
-  iconUrl: require("../assets/Property 1=fluent_sport-soccer-16-filled.png"),
+  iconUrl: require("../assets/sport.png"),
   iconSize: [Marker_icon_width, Marker_icon_height],
 });
 

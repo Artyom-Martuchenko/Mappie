@@ -1,4 +1,5 @@
 import { Marker, Popup } from "react-leaflet";
+import './ListInfrastructure.css';
 import {
   Element,
   ListItems,
@@ -127,7 +128,7 @@ export function ListInfrastructure({
             icon={defineType(el.kinds)}
           >
             <Popup>
-              <h3>{el.name}</h3>
+              <h3 className="name">{el.name}</h3>
               <select
                 title="type_moving"
                 onChange={(e: any) =>
@@ -139,11 +140,11 @@ export function ListInfrastructure({
                     : endPositionHandler(null, null)
                 }
               >
-                <option value="">-</option>
-                <option value="foot-walking">Добраться пешком</option>
-                <option value="driving-car">Добраться на машине</option>
+                <option className="options" value="">Способ передвижения</option>
+                <option className="options" id="walking" value="foot-walking">Добраться пешком</option>
+                <option className="options" id="drive" value="driving-car">Добраться на машине</option>
               </select>
-              <button onClick={() => xidHandler(el.xid)}>Info</button>
+              <button className="info" onClick={() => xidHandler(el.xid)}>Info</button>
             </Popup>
           </Marker>
         ))}

@@ -6,6 +6,7 @@ import { SavedBar } from "../SavedBar/SavedBar";
 import { SearchBar } from "../SearchBar/SearchBar";
 import { BigCard } from "../BigCard/BigCard"
 import { useEffect } from "react";
+import back_arrow from '@/arrow_back.png';
 import { actionType, Element, ListItems } from "./SideBarTypes";
 
 export function SideBar({
@@ -79,7 +80,10 @@ export function SideBar({
       )}
       {typeof xid !== "undefined" && typeof searchData !== "undefined" && (
         <div className="details_div">
-          <button onClick={backHandler}>Вернуться</button>
+          <button className="back_group" onClick={backHandler}>
+            <img className="back_arrow" src={back_arrow} alt=''/>
+            <h3 className='back_operations'>Вернуться</h3>
+          </button>
           <BigCard data={searchData.data}/>
         </div>
       )}

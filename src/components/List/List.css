@@ -43,6 +43,14 @@
   display: flex;
 }
 
+.button_list_active {
+  all: unset;
+  margin-bottom: 1.25rem;
+  display: flex;
+  background-color: rgb(180, 180, 249);
+  border-radius: 1rem;
+}
+
 .scrolling {
   overflow-y: scroll;
   overflow-x: hidden;

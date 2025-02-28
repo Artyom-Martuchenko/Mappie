@@ -56,7 +56,6 @@ export function Map({ radius, infrastructure, infrastructureHandler, filterOptio
                 <ResetCenterView selectPosition={position} />
                 <Circle center={position.lat == 0 && position.lng == 0 ? [minsk_center_latitude, minsk_center_longitude] : [position.lat, position.lng]} radius={radius} color="blue"/>
                 { endPosition !== null && profile !== null && <Direction start={[position.lat, position.lng]} end={endPosition} profile={profile} />}
-                {/* <Polyline pathOptions={{ color: 'red' }} positions={[startCoordinates, endCoordinates]} />: */}
             </MapContainer>
         </div>
     );

@@ -36,11 +36,11 @@ export function SearchBar({
         />
         <h3 className="RadiusText">км</h3>
       </div>
-      <div className="search_btn_div">
+      {/* <div className="search_btn_div">
         <button className="search_btn">
           <img className="search_img" src={search_btn} alt="search_button" />
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }

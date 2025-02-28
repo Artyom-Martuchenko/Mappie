@@ -33,7 +33,7 @@ export function List ({radius, infrastructure, filterOptionsHandler}:{radius : n
   <div className="list_border">
     <div className="scrolling">
       <div className="list">
-        {items.filter((item) => itemFilter(item)).map((item) => <button className="button_list" key={item.id} onClick={() => itemHandler(item)}>
+        {items.filter((item) => itemFilter(item)).map((item) => <button className={item.active? "button_list_active": "button_list"} key={item.id} onClick={() => itemHandler(item)}>
           <img className="types_img" src={item.img} alt="type"/>
           <h4 className="types_text">{item.name}</h4>
         </button>)}

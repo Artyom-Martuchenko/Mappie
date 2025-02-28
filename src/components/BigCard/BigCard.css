@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'MontRegular';
+  src: url('@/Mont/Mont-Regular.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
 .big_cards_main {
   border-radius: 10px;
   border-style: solid;
@@ -14,7 +21,6 @@
   width: 25rem;
   height: 18.75rem;
   border-radius: 10px;
-  background-color: gray;
   margin: 1.25rem 1.25rem 0;
 }
 
@@ -32,7 +38,6 @@
 .big_cards_attributes {
   width: 30px;
   height: 30px;
-  background-color: gray;
 }
 
 #big_cards_group_buttons {
@@ -64,13 +69,45 @@
   height: 2.5rem;
 }
 
-.button_search_disactive {
-  background-color: rgba(94, 123, 199, 1);
-  color: white;
+.button_search_disactive{
+  border-style: solid;
+  border-width: medium;
   border-radius: 5px;
-  border-color: rgba(94, 123, 199, 1);
   width: 9.625rem;
   height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#button_save_disactivate{
+  background-color: rgba(199, 94, 94, 1);
+  color: white;
+  border-color: rgba(199, 94, 94, 1);
+}
+
+#button_save_activate{
+  background-color: white;
+  color: rgb(109, 126, 124);
+  border-color: rgb(109, 126, 124);
+}
+
+#button_search_disactivate{
+  background-color: rgba(94, 123, 199, 1);
+  color: white;
+  border-color: rgba(94, 123, 199, 1);
+}
+
+#button_search_drive{
+  background-color: white;
+  color: rgb(0, 255, 37);
+  border-color: rgb(0, 255, 37);
+}
+
+#button_search_walking{
+  background-color: white;
+  color: rgb(245, 255, 0);
+  border-color: rgb(245, 255, 0);
 }
 
 .text{
@@ -81,4 +118,21 @@
   text-overflow: ellipsis;
   /* Запрещаем перенос слов */
   white-space: wrap;
+}
+
+.icon_big_card{
+  height: 20px;
+  width: 16px;
+  margin-right: 10px;
+}
+
+#icon_car{
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+
+.font_big_card{
+  font-family: 'MontRegular';
+  font-size: 14px;
 }
