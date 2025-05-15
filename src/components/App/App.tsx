@@ -1,4 +1,5 @@
 import { SideBar } from "../SideBar/SideBar";
+import {Route} from "react-router";
 import { Map } from "../Map/Map";
 import { useState } from "react";
 import './App.css';
@@ -8,8 +9,8 @@ export const App = () => {
   const [radius, setRadius] = useState(0)
   const [infrastructure, setInfrastructure] = useState<ListItems[]>([]);
   const [filterOptions, setFilterOptions] = useState<Element[]>([])
-  const [searchName, setSearchName] = useState<string>()
-  const [xid, setXid] = useState<string>()
+  const [searchName, setSearchName] = useState<string | undefined>(undefined)
+  const [xid, setXid] = useState<string | undefined>(undefined)
 
   const xidHandler = (value : string | undefined) => {
     setXid(value)
@@ -20,9 +21,9 @@ export const App = () => {
     console.log(value)
   };
 
-  const infrastructureHandler = (value: ListItems[]) => {
-    setInfrastructure((prev) => [...prev, ...value])
-  }
+  // const infrastructureHandler = (value: ListItems[]) => {
+  //   setInfrastructure(value.length > 0? (prev) => [...prev, ...value] : [])
+  // }
 
   const radiusHandler = (value : number) =>{
     setRadius(value * 1000)//Используется один раз, для перевода из километров в метры
@@ -38,8 +39,8 @@ export const App = () => {
 
   return (
     <div className="app">
-      <SideBar xid={xid} xidHandler={xidHandler} searchName={searchName} searchNameHandler={searchNameHandler} radius={radius} radiusHandler={radiusHandler} infrastructure={infrastructure} filterOptionsHandler={filterOptionsHandler}/>
-      <Map xidHandler={xidHandler} searchName={searchName} radius={radius} filterOptions={filterOptions} infrastructure={infrastructure} infrastructureHandler={infrastructureHandler} />
+      <SideBar xid={xid} xidHandler={xidHandler} searchName={searchName} searchNameHandler={searchNameHandler} radius={radius} radiusHandler={radiusHandler} filterOptionsHandler={filterOptionsHandler}/>
+      <Map xidHandler={xidHandler} searchName={searchName} radius={radius} filterOptions={filterOptions} />
     </div>
   );
 };

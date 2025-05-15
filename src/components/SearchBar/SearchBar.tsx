@@ -6,13 +6,11 @@ import { SearchInput } from "../SearchInput/SearchInput";
 
 export function SearchBar({
   radius,
-  infrastructure,
   filterOptionsHandler,
   radiusHandler,
   searchNameHandler,
-}: {
+}:{
   radius: number;
-  infrastructure: ListItems[];
   filterOptionsHandler: (element : Element, action : actionType) => void,
   radiusHandler: (value: number) => void;
   searchNameHandler: (value : string) => void;
@@ -23,7 +21,6 @@ export function SearchBar({
       <h3 className="text_favourite">Искать:</h3>
       <List
         radius={radius}
-        infrastructure={infrastructure}
         filterOptionsHandler={filterOptionsHandler}
       />
       <h3 className="text_favourite">В радиусе</h3>

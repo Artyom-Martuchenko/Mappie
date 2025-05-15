@@ -1,4 +1,5 @@
 import { Marker, Popup } from "react-leaflet";
+import { Link, useNavigate } from "react-router";
 import './ListInfrastructure.css';
 import {
   Element,
@@ -38,6 +39,7 @@ export function ListInfrastructure({
   searchName,
   xidHandler,
 }: List) {
+  const navigate = useNavigate()
   const keywords = [
     "nature",
     "histor",
@@ -92,6 +94,10 @@ export function ListInfrastructure({
     }
   };
 
+  const navigateHandler = ( xid: string) => {
+    navigate('/search/detail/' + xid)
+  }
+
   const filterInfrastructure = (infrastructure: any, searchName: string) => {
     if (filterOptions.length != 0) {
       for (let index = 0; index < filterOptions.length; index++) {
@@ -114,7 +120,7 @@ export function ListInfrastructure({
 
   return (
     <div>
-      {listInfrastructure
+      {listInfrastructure 
         .filter((infrastructure) =>
           filterInfrastructure(
             infrastructure,
@@ -144,7 +150,7 @@ export function ListInfrastructure({
                 <option className="options" id="walking" value="foot-walking">Добраться пешком</option>
                 <option className="options" id="drive" value="driving-car">Добраться на машине</option>
               </select>
-              <button className="info" onClick={() => xidHandler(el.xid)}>Info</button>
+              <button className="info" onClick={()=>navigateHandler(el.xid)}>Info</button>
             </Popup>
           </Marker>
         ))}

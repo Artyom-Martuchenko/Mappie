@@ -2,9 +2,13 @@ import './List.css';
 import { useState } from 'react';
 import { dummy_items } from '../../constants/constants';
 import { Element, actionType } from './ListTypes';
+import { useSelector } from 'react-redux';
+import { RootState } from 'store';
 
-export function List ({radius, infrastructure, filterOptionsHandler}:{radius : number, infrastructure : any[], filterOptionsHandler : (element : Element, action : actionType) => void}){
+export function List ({radius, filterOptionsHandler}:{radius : number, filterOptionsHandler : (element : Element, action : actionType) => void}){
   const [items, setItems] = useState(dummy_items)
+
+  const infrastructure = useSelector((state:RootState) => state.infrastructure.value)
 
   const itemFilter = (value : { kinds: string }) => {
     if(infrastructure.length !== 0 && radius !== 0){

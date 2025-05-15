@@ -58,9 +58,9 @@ export function Direction({
 
   const apiKey = "5b3ce3597851110001cf62483fa5a58ee172490c9e958d4a7382d1dd";
   const apiUrl = "https://api.openrouteservice.org/v2/directions";
-  if(apiKey === undefined || apiUrl === undefined){
-    throw Error('Cant get process.env')
-  }
+  // if(apiKey === undefined || apiUrl === undefined){
+  //   throw Error('Cant get process.env')
+  // }
   const ors = new OpenRouteService(apiKey, apiUrl);
   const [routeData, setRouteData] = useState<any[][]>([]);
   

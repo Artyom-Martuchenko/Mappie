@@ -34,11 +34,13 @@ button {
 }
 
 .search_button{
-    display: flex;
+  display: flex;
+  margin: 0.938rem 1.563rem 0;
 }
 
 .saved_button{
-    display: flex;
+  display: flex;
+  margin: 0.938rem 1.563rem 0;
 }
 
 #user_icon {

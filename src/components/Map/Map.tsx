@@ -9,19 +9,30 @@ import { fetchInfrastructure } from "../../utils/fetchInfrastructure";
 import { Marker_icon_height, Marker_icon_width, minsk_center_latitude, minsk_center_longitude} from "../../constants/constants";
 import { Direction } from "../Direction/Direction";
 import { ListItems, Element } from "./MapTypes";
+import { useSelector, useDispatch } from "react-redux";
+import { AppDispatch, RootState } from "store";
+import { add_infrastucture, remove_infrastucture } from "../../store/reducers/infrastructureSlice";
 
-export function Map({ radius, infrastructure, infrastructureHandler, filterOptions, searchName, xidHandler}:{ xidHandler: (value:string) => void, searchName : string | undefined,radius : number, infrastructure : ListItems[], infrastructureHandler : (value : ListItems[]) => void, filterOptions : Element[]}){
+export function Map({ radius, filterOptions, searchName, xidHandler}:{ xidHandler: (value:string) => void, searchName : string | undefined,radius : number, filterOptions : Element[]}){
     const [endPosition, setEndPosition] = useState<null | number[]>(null);
     const [profile, setProfile] = useState<null | 'driving-car' | 'foot-walking'>(null)
     const [position, setPosition] = useState({ lat: minsk_center_latitude, lng: minsk_center_longitude });
 
+    const infrastructure = useSelector((state:RootState)=>state.infrastructure.value)
+    const dispatch = useDispatch<AppDispatch>()
+
+    const infrastructureHandler = (value: ListItems[]) => {
+        dispatch(value.length > 0 ? add_infrastucture({elements: value}) : remove_infrastucture())
+    }
     const endPositionHandler = (value : number[] | null, prof: "driving-car" | "foot-walking" | null) =>{
         setEndPosition(value)
         setProfile((prev) => prof)
     }
 
     useEffect(() => {
-        fetchInfrastructure({radius, position, infrastructureHandler, infrastructure});
+        if(radius !== undefined && radius !== null && radius > 0){
+            fetchInfrastructure({radius, position, infrastructureHandler, infrastructure});
+        }
     }, [radius]);
 
     navigator.geolocation.watchPosition(

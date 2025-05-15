@@ -5,6 +5,6 @@ interface Mode {
 
 export interface Prop {
   savedHandler: (arg: string) => void;
-  mode: Mode;
+  // mode: Mode;
 }
 

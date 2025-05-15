@@ -26,6 +26,16 @@ export interface ListItems {
   rate: number;
 }
 
+export interface SavedTopic{
+  dist: number;
+  point: { lon: number; lat: number };
+  name: string;
+  kinds: string;
+  osm: string;
+  xid: string;
+  rate: number;
+}
+
 export interface SelectionData {
   lat: number;
   lng: number;

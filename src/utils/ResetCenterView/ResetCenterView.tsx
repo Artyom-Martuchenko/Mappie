@@ -5,7 +5,7 @@ import { SelectionData } from '../../constants/constants';
 
 export function ResetCenterView({ selectPosition } : {selectPosition : SelectionData}) {
   const map = useMap();
-
+  
   useEffect(() => {
     if (selectPosition) {
       map.setView(
@@ -17,5 +17,6 @@ export function ResetCenterView({ selectPosition } : {selectPosition : Selection
       )
     }
   }, [selectPosition]);
+  
   return <></>;
 }

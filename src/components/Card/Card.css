@@ -15,7 +15,6 @@
 }
 
 .photo {
-  background-image: url("../../assets/cards_photo.png");
   margin-right: 1.25rem;
   flex-basis: 50%;
   border-radius: 0.5rem;
@@ -31,6 +30,8 @@
 .attributes {
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
+  height: 18px;
+  width: 18px;
 }
 
 .description {

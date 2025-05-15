@@ -3,8 +3,23 @@ import arrow_symbol from '@/arrow_cards.png';
 import culture from '@/culture.png';
 import history from '@/history.png';
 import './Card.css';
+import { useDispatch } from 'react-redux';
+import { AppDispatch } from 'store';
+import { remove } from '../../store/reducers/savedTopicsSlice';
+import { useNavigate } from 'react-router';
 
-export function Card(){
+export function Card({ item }:{ item : any}){
+    const dispatch = useDispatch<AppDispatch>()
+    const navigate = useNavigate()
+    
+    const saveHandler = () => {
+        dispatch(remove({xid: item.xid}))
+    }
+    
+    const arrowHandler = () => {
+        navigate('/search/detail/' + item.xid)
+    }
+
     return(
         <div className='card'>
             <div className='head'>
@@ -12,12 +27,16 @@ export function Card(){
                     <img src={culture} className='attributes' alt='attributes'/>
                     <img src={history} className='attributes' alt='attributes'/>
                 </div>
-                <h3 className='name'>Name</h3>
+                <h3 className='name'>{item.name}</h3>
             </div>
-            <h2 className='description'>description</h2>
+            <h2 className='description'>{item.description}</h2>
             <div className='low_buttons'>
-                <img src={save_symbol} alt='save symbol'/>
-                <img src={arrow_symbol} alt='arrow symbol'/>
+                <button onClick={()=>saveHandler()}>
+                    <img src={save_symbol} alt='save symbol'/>
+                </button>
+                <button onClick={()=>arrowHandler()}>
+                    <img src={arrow_symbol} alt='arrow symbol'/>
+                </button>
             </div>
         </div>
     )
